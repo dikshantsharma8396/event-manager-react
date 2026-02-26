@@ -1,34 +1,44 @@
 import React from 'react';
 
-export default function Navbar({ searchTerm, setSearchTerm, isDarkMode, setIsDarkMode, onLogout }) {
+export default function Navbar({ userName, searchTerm, setSearchTerm, isDarkMode, setIsDarkMode, onLogout, userRole }) {
   return (
-    <nav style={{ 
-      display: 'flex', 
-      justifyContent: 'space-between', 
+    <nav className="navbar" style={{
+      width: '100%',
+      padding: '1rem 2rem',
+      display: 'flex',
+      justifyContent: 'space-between',
       alignItems: 'center',
-      padding: '10px 0',
-      borderBottom: '1px solid #555',
-      marginBottom: '20px',
-      flexWrap: 'wrap', // Responsive UI: Wraps on small screens
-      gap: '10px'
+      borderBottom: '1px solid #ddd',
+      marginBottom: '20px'
     }}>
-      <h2>Dashboard</h2>
-      
-      {/* Bonus: Search Functionality */}
-      <input 
-        type="text"
-        placeholder="Search title..." 
-        value={searchTerm}
-        style={{ flex: '1', minWidth: '200px', padding: '8px' }}
-        onChange={(e) => setSearchTerm(e.target.value)} 
-      />
+      <div>
+        <h2 style={{ margin: 0 }}>EventHub</h2>
+        <span style={{ fontSize: '0.9rem', color: '#007bff' }}>
+          Welcome, <strong>{userName}</strong> ({userRole})
+        </span>
+      </div>
 
-      <div style={{ display: 'flex', gap: '10px' }}>
-        {/* Bonus: Dark Mode */}
-        <button onClick={() => setIsDarkMode(!isDarkMode)}>
+      <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
+        <input 
+          type="text" 
+          placeholder="Search events..." 
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          style={{ padding: '8px', borderRadius: '5px', border: '1px solid #ccc' }}
+        />
+        
+        <button onClick={() => setIsDarkMode(!isDarkMode)} className="theme-btn">
           {isDarkMode ? '☀️ Light' : '🌙 Dark'}
         </button>
-        <button onClick={onLogout} style={{ backgroundColor: '#ff4444', color: 'white' }}>
+
+        <button onClick={onLogout} style={{
+          backgroundColor: '#ff4d4d',
+          color: 'white',
+          border: 'none',
+          padding: '8px 15px',
+          borderRadius: '5px',
+          cursor: 'pointer'
+        }}>
           Logout
         </button>
       </div>
