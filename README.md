@@ -1,16 +1,60 @@
-# React + Vite
+# 📅 Mini Event Manager (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-featured Event Management Dashboard built with **React.js**. This project features Role-Based Access Control (RBAC), real-time search, sorting, and a fully responsive UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Key Features
 
-## React Compiler
+### 🔐 Role-Based Authentication
+- **Admin Role**: Full access to Create, Read, Update, and Delete (CRUD) events.
+- **User Role**: View-only access to the event dashboard.
+- **Persistent Login**: Session state is saved using `localStorage`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🛠️ Event Management (CRUD)
+- **Create**: Admins can add new events with titles, dates, and descriptions.
+- **Read**: Dynamic display of event cards in a centered, responsive grid.
+- **Update**: Edit existing events directly from the dashboard.
+- **Delete**: Remove outdated events with a single click.
 
-## Expanding the ESLint configuration
+### 🌟 Bonus Functionalities
+- **Real-Time Search**: Instantly filter events by title as you type.
+- **Date Sorting**: Toggle between "Oldest First" and "Newest First" sorting.
+- **Dark Mode**: A smooth, persistent theme toggle for better user experience.
+- **Form Validation**: Prevents empty event submissions with instant alerts.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📁 Project Structure
+Following a **clean folder structure** for scalability:
+- `src/components/`: Modular React components (Navbar, EventCard, Login).
+- `src/components/styles/`: Centralized CSS for layout and theming.
+- `src/App.jsx`: Main logic handling state and persistence.
+- `src/main.jsx`: Application entry point.
+
+---
+
+## 🛠️ Tech Stack
+- **Frontend**: React.js (Hooks: `useState`, `useEffect`).
+- **Styling**: CSS3 (Flexbox & CSS Grid for Responsive UI).
+- **Storage**: Browser `localStorage` (No backend/DB required).
+- **Build Tool**: Vite.
+
+---
+
+## 🏃‍♂️ How to Run Locally
+1. Clone the repo:
+   ```bash
+   git clone [https://github.com/dikshantsharma8396/event-manager-react.git](https://github.com/dikshantsharma8396/event-manager-react.git)
+2. Install dependencies:
+   '''bash
+   npm install
+
+4. Start the developer server:
+   '''bash
+   npm run dev
+
+ 🔑 Demo Credentials
+Admin: username: admin | password: admin123
+
+User: username: user | password: user123      
