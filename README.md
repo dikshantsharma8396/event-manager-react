@@ -47,11 +47,11 @@ Following a **clean folder structure** for scalability:
    ```bash
    git clone [https://github.com/dikshantsharma8396/event-manager-react.git](https://github.com/dikshantsharma8396/event-manager-react.git)
 2. Install dependencies:
-   '''bash
+   
    npm install
 
 4. Start the developer server:
-   '''bash
+   
    npm run dev
 
  🔑 Demo Credentials
