@@ -1,36 +1,40 @@
 # 📅 Mini Event Manager (React)
 
-A full-featured Event Management Dashboard built with **React.js**. This project features Role-Based Access Control (RBAC), real-time search, sorting, and a fully responsive UI.
+A professional Event Management Dashboard built with **React.js**. This version features **Dynamic Role-Based Access**, real-time search, and persistent storage.
 
 ---
 
 ## 🚀 Key Features
 
-### 🔐 Role-Based Authentication
-- **Admin Role**: Full access to Create, Read, Update, and Delete (CRUD) events.
-- **User Role**: View-only access to the event dashboard.
-- **Persistent Login**: Session state is saved using `localStorage`.
+### 🔐 New: Dynamic Authentication (Regex Based)
+- **Email Validation**: Uses Regular Expressions to ensure a valid email format.
+- **Dynamic Roles**: No fixed passwords! Use the keyword **"Admin"** anywhere in your name for full access.
+- **User Role**: Any other name gets "View Only" access.
+- **Personalization**: Displays "Welcome, [User Name]" on the dashboard.
 
 ### 🛠️ Event Management (CRUD)
-- **Create**: Admins can add new events with titles, dates, and descriptions.
-- **Read**: Dynamic display of event cards in a centered, responsive grid.
-- **Update**: Edit existing events directly from the dashboard.
-- **Delete**: Remove outdated events with a single click.
+- **Create**: Admins can add events (Title, Date, Description).
+- **Read**: Responsive grid layout to view all events.
+- **Update/Delete**: Admin-only controls to manage event data.
 
 ### 🌟 Bonus Functionalities
-- **Real-Time Search**: Instantly filter events by title as you type.
-- **Date Sorting**: Toggle between "Oldest First" and "Newest First" sorting.
-- **Dark Mode**: A smooth, persistent theme toggle for better user experience.
-- **Form Validation**: Prevents empty event submissions with instant alerts.
+- **Real-Time Search**: Filter events instantly by title.
+- **Date Sorting**: Toggle between newest and oldest events.
+- **Dark Mode**: Persistent theme toggle (saves your preference).
+- **No Backend**: Uses `localStorage` to keep your data safe even after refresh.
+
+---
+
+## 🔑 How to Login (Demo)
+1. **To be an Admin**: Enter Name like `Dikshant Admin`, any valid email (e.g., `test@gmail.com`), and any password (min 6 chars).
+2. **To be a User**: Enter any name (without "Admin"), a valid email, and password.
 
 ---
 
 ## 📁 Project Structure
-Following a **clean folder structure** for scalability:
-- `src/components/`: Modular React components (Navbar, EventCard, Login).
-- `src/components/styles/`: Centralized CSS for layout and theming.
-- `src/App.jsx`: Main logic handling state and persistence.
-- `src/main.jsx`: Application entry point.
+- `src/components/`: Modular UI Components.
+- `src/components/styles/`: Centralized CSS.
+- `src/App.jsx`: State management & logic.
 
 ---
 
@@ -54,7 +58,7 @@ Following a **clean folder structure** for scalability:
    
    npm run dev
 
- 🔑 Demo Credentials
-Admin: username: admin | password: admin123
-
-User: username: user | password: user123      
+## 🔑 Demo Login (Any Valid Format)
+- **Email**: koi_bhi@gmail.com
+- **Password**: 123456 (min 6 chars)
+- **Role Tip**: Name mein "Admin" likhein admin features dekhne ke liye.
