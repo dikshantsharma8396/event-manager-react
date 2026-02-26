@@ -1,0 +1,35 @@
+/* Centering Container */
+.app-container {
+  max-width: 1100px;
+  margin: 0 auto; /* Centers the app horizontally */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers children like the form */
+}
+
+/* Mandatory: Responsive Grid */
+.event-grid {
+  display: grid;
+  width: 100%;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-top: 20px;
+}
+
+/* Form Styling */
+.event-form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* Bonus: Dark Mode smooth colors */
+.dark-mode { background-color: #121212; color: #ffffff; }
+.light-mode { background-color: #ffffff; color: #000000; }
